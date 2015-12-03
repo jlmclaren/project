@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Work Order Application</title>
+
+    <!-- Bootstrap -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Application Stylesheets -->
+    <link href="/stylesheets/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Workorder Project</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/workorders">Workorders</a></li>
+            <li class="active"><a href="#">My Work Orders</a></li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-8">
+
+          <!-- template code -->
+
+          <div class="post">
+            <h1><%= workorder.jobSite.name %></h1>
+            <h3 class="author">Employee</h3>
+            <h4 class="">Name</h4>
+            <span class="author"><%= workorder.name %></span>
+            <h4 class="">Employee Id</h4>
+            <span class="author"><%= workorder.employeeId %></span>
+            <h4 class=""></h4>
+            <h3 class="author">Job Site Details</h3>
+            <h4 class="">Address</h4>
+            <span class="author"><%= workorder.jobSite.location%></span>
+            <h4 class="">Telephone Number</h4>
+            <span class="author"><%= workorder.jobSite.telephone %></span>
+            <h4 class="">E-mail</h4>
+            <span class="author"><%= workorder.jobSite.email %></span>
+            <h4 class=""></h4>
+            <h3 class="author">Service Order</h3>
+            <h4 class="">Product</h4>
+            <span class="author"><%= workorder.serviceOrder.product %></span>
+            <h4 class="">Make</h4>
+            <span class="author"><%= workorder.serviceOrder.make %></span>
+            <h4 class="">Model</h4>
+            <span class="author"><%= workorder.serviceOrder.model %></span>
+            <h4 class="">Serial Number</h4>
+            <span class="author"><%= workorder.serviceOrder.serial %></span>
+            <h4 class="">Summary</h4>
+            <p><%= workorder.serviceOrder.summary %></p>
+            <h3 class="author">Parts Details</h3>
+            <h4 class="">Quantity</h4>
+            <span class="author"><%= workorder.parts.quantity %></span>
+            <h4 class="">Description</h4>
+            <span class="author"><%= workorder.parts.description %></span>
+            <h4 class="">Cost</h4>
+            <span class="author"><%= workorder.parts.cost %></span>
+            <h4 class=""></h4>
+            <h3 class="author">Labor</h3>
+            <h4 class="">Date</h4>
+            <span class="author"><%= workorder.labor.date %></span>
+            <h4 class="">Type of Labor</h4>
+            <span class="author"><%= workorder.labor.laborType %></span>
+            <h4 class="">Summary</h4>
+            <p><%= workorder.labor.summary %></p>
+            <h4 class="">Hours</h4>
+            <span class="author"><%= workorder.labor.hours %></span>
+            <h4 class="">Price</h4>
+            <span class="author"><%= workorder.labor.price %></span>
+            <h4 class="">Comments</h4>
+            <p><%= workorder.comments %></p>
+          </div>
+
+          <nav class="post-links">
+            <ul>
+              <li><a href="/workorders">Back to Posts</a></li>
+              
+          </nav>
+
+        </div> <!-- /col-md-8 -->
+         <!-- /col-md-4 -->
+      </div> <!-- /row -->
+
+    </div>    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/javascripts/bootstrap.min.js"></script>
+  </body>
+</html>
